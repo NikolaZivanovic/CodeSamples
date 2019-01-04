@@ -1,0 +1,68 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  .Container {
+    width: 250px;
+    margin-right: 0.5em;
+  }
+}
+
+.Temp {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em 10em 2em;
+}
+
+.Reload {
+  z-index: 100;
+  position: absolute;
+  left: 2em;
+  bottom: 1em;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 7em;
+  color: #fff;
+  font-size: 1em;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.WeatherInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.WeatherInfoTemp {
+  font-size: 3em;
+}
+
+.WeatherInfoDesc {
+  font-size: 1em;
+}
+
+.WeatherIcon {
+  width: 100px;
+}
+
+.ReloadIcon {
+  width: 15px;
+  height: 15px;
+  margin-right: 1em;
+  transition: all 2s ease;
+}
+
+.SVGContainer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 250px;
+  width: 250px;
+}

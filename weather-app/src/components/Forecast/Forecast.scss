@@ -1,0 +1,62 @@
+.Container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  background-size: cover;
+  transition: background-image 2s ease;
+  overflow: hidden;
+  margin-left: 0.5em;
+
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Container {
+    order: -1;
+    margin: 0 0 0.5em 0;
+    height: 400px;
+  }
+}
+
+.DropDownContainer {
+  display: flex;
+  width: fit-content;
+  padding: 2em 0 0 2em;
+}
+
+.DropDownContainer:hover + .DateContainer {
+  opacity: 0;
+}
+
+.DateContainer {
+  padding-left: 2em;
+  color: #fff;
+  opacity: 0.8;
+  padding-top: 0.2em;
+  transition: all 0.5 ease;
+}
+
+.Date {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.ForecastCardContainer {
+  height: 55%;
+  display: flex;
+  align-items: flex-end;
+}

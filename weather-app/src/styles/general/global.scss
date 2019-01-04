@@ -1,0 +1,124 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+div {
+  outline: none;
+}
+
+a,
+button,
+input[type="button"],
+input[type="submit"],
+textarea {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.15s;
+}
+
+input {
+  outline: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+select {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: 20px;
+  -moz-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -moz-padding-start: 2px;
+
+  background-image: url("Images/icons/arrow-down.svg") !important;
+  background-position: 97% 50% !important;
+  background-repeat: no-repeat !important;
+  background-size: 0.75em !important;
+  padding-right: 1.25em !important;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+.line {
+  animation: 5s strokefill infinite alternate;
+}
+
+@keyframes strokefill {
+  0% {
+    stroke: rgb(100, 96, 96);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 00% 50%;
+    stroke-width: 4;
+  }
+  80% {
+    stroke: rgb(83, 84, 85);
+  }
+  100% {
+    stroke: rgba(182, 24, 24, 0.74);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 00%;
+    stroke-width: 0;
+  }
+}
+
+.btn {
+  color: #8f94a3;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: background-color, color, border, 0.15s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+  }
+
+  &:disabled {
+    color: #8f94a3;
+    cursor: not-allowed;
+  }
+}
+
+.btn--link {
+  border-color: transparent;
+  background-color: transparent;
+  color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+
+  &:disabled {
+    font-style: italic;
+  }
+}

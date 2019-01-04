@@ -1,0 +1,4 @@
+{
+  "AJAX_REQUEST_DEFAULT_TIMEOUT": 30000,
+  "API_BASE_URL": "https://api.apixu.com/v1/forecast.json?key=b8544d2c4b1045dcb27121802182512&q="
+}

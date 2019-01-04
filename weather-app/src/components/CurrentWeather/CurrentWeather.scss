@@ -1,0 +1,25 @@
+.Container {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Container {
+    flex-direction: row;
+    width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+.Container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  margin-top: 0.5em;
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Container {
+    flex-grow: 1;
+    margin: 0;
+  }
+}
+
+.Stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 2em;
+}
+
+.StatsCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.Value {
+  font-size: 1em;
+}
+
+.Stat {
+  font-size: 0.5em;
+  opacity: 0.5;
+}
